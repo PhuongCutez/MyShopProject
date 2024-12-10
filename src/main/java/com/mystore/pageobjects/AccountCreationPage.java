@@ -44,6 +44,8 @@ public class AccountCreationPage extends BaseClass {
     private WebElement signUpNewsLetter;
     @FindBy(name = "newsletter")
     private WebElement privatePolicy;
+    @FindBy(name = "customer_privacy")
+    private WebElement privacyPolicy;
     @FindBy(xpath = "//buttion[text()='Save']")
     private WebElement saveBtn;
 
@@ -70,6 +72,7 @@ public class AccountCreationPage extends BaseClass {
         action.click(driver, receiveOffers);
         action.click(driver, signUpNewsLetter);
         action.click(driver, privatePolicy);
+        action.click(driver, privacyPolicy);
 
 
     }
