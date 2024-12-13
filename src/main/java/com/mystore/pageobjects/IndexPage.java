@@ -4,7 +4,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.mystore.actiondriver.Action;
 import com.mystore.base.BaseClass;
 
@@ -15,7 +14,7 @@ public class IndexPage extends BaseClass {
     @FindBy(xpath = "//*[@id=\"_desktop_user_info\"]/div/a")
     private WebElement signInBtn;
 
-    @FindBy(xpath = "//*[@id=\"_desktop_logo\"]/a/img")
+    @FindBy(className = "img-fluid")
     private WebElement myStoreLogo;
 
     @FindBy(xpath = "//*[@id=\"search_widget\"]/form/input[2]")
@@ -23,21 +22,21 @@ public class IndexPage extends BaseClass {
 
 
     public IndexPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(getDriver(), this);
     }
 
     public LoginPage clickOnSignIn() throws Throwable {
-        action.fluentWait(driver, signInBtn, 10);
-        action.click(driver, signInBtn);
+        action.fluentWait(getDriver(), signInBtn, 10);
+        action.click(getDriver(), signInBtn);
         return new LoginPage();
     }
 
     public boolean validateLogo() throws Throwable {
-        return action.isDisplayed(driver, myStoreLogo);
+        return action.isDisplayed(getDriver(), myStoreLogo);
     }
 
     public String getMyStoreTitle() {
-        String myStoreTitel=driver.getTitle();
+        String myStoreTitel=getDriver().getTitle();
         return myStoreTitel;
     }
 

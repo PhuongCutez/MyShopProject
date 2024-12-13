@@ -26,7 +26,7 @@ public class ShippingPage extends BaseClass {
 
 
     public PaymentPage clickOnProceedToCheckOut() throws Throwable {
-        action.click(driver, proceedToCheckOutBtn);
+        action.click(getDriver(), proceedToCheckOutBtn);
         return new PaymentPage();
     }
 

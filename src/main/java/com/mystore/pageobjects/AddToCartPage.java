@@ -4,7 +4,6 @@ package com.mystore.pageobjects;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.mystore.actiondriver.Action;
 import com.mystore.base.BaseClass;
 
@@ -29,7 +28,7 @@ public class AddToCartPage extends BaseClass {
     private WebElement proceedToCheckOutBtn;
 
     public AddToCartPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(getDriver(), this);
     }
     public void selectSize(String size1) throws Throwable {
         action.selectByVisibleText(size1, size);
@@ -39,17 +38,17 @@ public class AddToCartPage extends BaseClass {
     }
 
     public void clickOnAddToCart() throws Throwable {
-        action.click(driver, addToCartBtn);
+        action.click(getDriver(), addToCartBtn);
     }
 
     public boolean validateAddtoCart() throws Throwable {
-        action.fluentWait(driver, addToCartMessag, 10);
-        return action.isDisplayed(driver, addToCartMessag);
+        action.fluentWait(getDriver(), addToCartMessag, 10);
+        return action.isDisplayed(getDriver(), addToCartMessag);
     }
 
     public OrderPage clickOnCheckOut() throws Throwable {
-        action.fluentWait(driver, proceedToCheckOutBtn, 10);
-        action.JSClick(driver, proceedToCheckOutBtn);
+        action.fluentWait(getDriver(), proceedToCheckOutBtn, 10);
+        action.JSClick(getDriver(), proceedToCheckOutBtn);
         return new OrderPage();
     }
 

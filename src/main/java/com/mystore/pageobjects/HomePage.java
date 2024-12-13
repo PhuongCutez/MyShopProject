@@ -25,20 +25,20 @@ public class HomePage extends BaseClass {
     private WebElement orderHistory;
 
     public HomePage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(getDriver(), this);
     }
 
 
     public boolean validateMyWishList() throws Throwable {
-        return action.isDisplayed(driver, myWishList);
+        return action.isDisplayed(getDriver(), myWishList);
     }
 
     public boolean validateOrderHistory() throws Throwable {
-        return action.isDisplayed(driver, orderHistory);
+        return action.isDisplayed(getDriver(), orderHistory);
     }
 
     public String getCurrURL() throws Throwable {
-        String homePageURL=action.getCurrentURL(driver);
+        String homePageURL=action.getCurrentURL(getDriver());
         return homePageURL;
     }
 }

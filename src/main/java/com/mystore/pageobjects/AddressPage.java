@@ -38,49 +38,36 @@ public class AddressPage extends BaseClass {
     private WebElement mobilePhone;
     @FindBy(xpath = "//*[@id=\"delivery-address\"]/div/footer/button")
     private WebElement continueBtn;
+    @FindBy(xpath = "//*[@id=\"checkout-addresses-step\"]/h1")
+    private WebElement addressTitle;
 
     public AddressPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(getDriver(), this);
     }
-   public void enterAlias(String alias) throws Throwable {
-        action.type(aliasAddress, alias);
-    }
-    public void enterFirstName(String fName) throws Throwable {
-        if(fName.equals("")) {
+
+    public void addAddress(String alias, String fName, String lName, String comp, String add, String addComp, String cty, String lstate, String postalCode, String ctry, String phone) {
+        if(fName.equals("") || lName.equals("")) {
             action.type(firstName, fName);
-        }
-    }
-    public void enterLastName(String lName) throws Throwable {
-        if(lName.equals("")) {
             action.type(lastName, lName);
         }
-    }
-    public void enterCompany(String comp) throws Throwable {
+
+        action.type(aliasAddress, alias);
+        action.type(firstName, fName);
+        action.type(lastName, lName);
         action.type(company, comp);
-    }
-    public void enterAddress(String add) throws Throwable {
         action.type(address, add);
-    }
-    public void enterAddressComplement(String addComp) throws Throwable {
         action.type(addressComplement, addComp);
-    }
-    public void enterCity(String cityName) throws Throwable {
-        action.type(city, cityName);
-    }
-    public void enterState(String stateName) throws Throwable {
-        action.selectByVisibleText(stateName, state);
-    }
-    public void enterPostalCode(String postCode) throws Throwable {
-        action.type(postalCode, postCode);
-    }
-    public void enterCountry(String countryName) throws Throwable {
-        action.selectByVisibleText(countryName, country);
-    }
-    public void enterMobilePhone(String phone) throws Throwable {
+        action.type(city, cty);
+        action.selectByVisibleText(lstate, state);
+        action.type(this.postalCode, postalCode);
+        action.selectByVisibleText(ctry, country);
         action.type(mobilePhone, phone);
     }
+    public boolean verifyAddressTitle() {
+       return action.isDisplayed(getDriver(), addressTitle);
+    }
     public ShippingPage clickOnContinueBtn() throws Throwable {
-        action.JSClick(driver, continueBtn);
+        action.JSClick(getDriver(), continueBtn);
         return new ShippingPage();
 
    }

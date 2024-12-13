@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.mystore.actiondriver.Action;
 import com.mystore.base.BaseClass;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * @author Hitendra
@@ -31,31 +32,30 @@ public class LoginPage extends BaseClass {
     private WebElement onNewAccount;
 
     public LoginPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(getDriver(), this);
     }
 
     public HomePage login(String uname, String pswd,HomePage homePage) throws Throwable {
-        action.scrollByVisibilityOfElement(driver, userName);
+        action.scrollByVisibilityOfElement(getDriver(), userName);
         action.type(userName, uname);
         action.type(password, pswd);
-        action.JSClick(driver, signInBtn);
+        action.JSClick(getDriver(), signInBtn);
         Thread.sleep(2000);
         homePage=new HomePage();
         return homePage;
     }
 
     public AddressPage login(String uname, String pswd,AddressPage addressPage) throws Throwable {
-        action.scrollByVisibilityOfElement(driver, userName);
+        action.scrollByVisibilityOfElement(getDriver(), userName);
         action.type(userName, uname);
         action.type(password, pswd);
-        action.click(driver, signInBtn);
+        action.click(getDriver(), signInBtn);
         Thread.sleep(2000);
         addressPage=new AddressPage();
         return addressPage;
     }
-
-    public AccountCreationPage createNewAccount(String newEmail) throws Throwable {
-        action.click(driver, onNewAccount);
+    public AccountCreationPage createNewAccount() throws Throwable {
+        action.click(getDriver(), onNewAccount);
         return new AccountCreationPage();
     }
 

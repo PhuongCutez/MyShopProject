@@ -1,6 +1,4 @@
-/**
- *
- */
+
 package com.mystore.pageobjects;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,10 +6,6 @@ import org.openqa.selenium.support.PageFactory;
 import com.mystore.actiondriver.Action;
 import com.mystore.base.BaseClass;
 
-/**
- * @author Hitendra
- *
- */
 public class AccountCreationPage extends BaseClass {
 
     Action action= new Action();
@@ -50,7 +44,7 @@ public class AccountCreationPage extends BaseClass {
     private WebElement saveBtn;
 
     public AccountCreationPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(getDriver(), this);
     }
 
     public void createAccount(String gender,String fName,
@@ -60,19 +54,19 @@ public class AccountCreationPage extends BaseClass {
                               String birth) throws Throwable {
 
         if(gender.equalsIgnoreCase("Mr")) {
-            action.click(driver, mr);
+            action.click(getDriver(), mr);
         } else {
-            action.click(driver, mrs);
+            action.click(getDriver(), mrs);
         }
         action.type(firstName, fName);
         action.type(lastName, lName);
         action.type(email, emails);
         action.type(passWord, passwd);
         action.type(birthDay, birth);
-        action.click(driver, receiveOffers);
-        action.click(driver, signUpNewsLetter);
-        action.click(driver, privatePolicy);
-        action.click(driver, privacyPolicy);
+        action.click(getDriver(), receiveOffers);
+        action.click(getDriver(), signUpNewsLetter);
+        action.click(getDriver(), privatePolicy);
+        action.click(getDriver(), privacyPolicy);
 
 
     }
@@ -83,7 +77,7 @@ public class AccountCreationPage extends BaseClass {
     }
 
     public boolean validateAcountCreatePage() throws Throwable {
-        return action.isDisplayed(driver, formTitle);
+        return action.isDisplayed(getDriver(), formTitle);
     }
 
 }

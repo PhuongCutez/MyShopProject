@@ -4,7 +4,6 @@ package com.mystore.pageobjects;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.mystore.actiondriver.Action;
 import com.mystore.base.BaseClass;
 
@@ -22,7 +21,7 @@ public class OrderPage extends BaseClass {
     private WebElement proceedToCheckOut;
 
     public OrderPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(getDriver(), this);
     }
 
     public double getUnitPrice() {
@@ -40,7 +39,7 @@ public class OrderPage extends BaseClass {
     }
 
     public LoginPage clickOnCheckOut() throws Throwable {
-        action.click(driver, proceedToCheckOut);
+        action.click(getDriver(), proceedToCheckOut);
         return new LoginPage();
     }
 
