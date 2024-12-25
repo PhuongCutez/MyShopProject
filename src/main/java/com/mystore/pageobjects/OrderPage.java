@@ -38,9 +38,9 @@ public class OrderPage extends BaseClass {
         return finalTotalPrice/100;
     }
 
-    public LoginPage clickOnCheckOut() throws Throwable {
+    public AccountCreationPage clickOnCheckOut() throws Throwable {
         action.click(getDriver(), proceedToCheckOut);
-        return new LoginPage();
+        return new AccountCreationPage();
     }
 
 }

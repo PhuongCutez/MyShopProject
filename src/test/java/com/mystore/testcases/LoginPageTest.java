@@ -1,9 +1,11 @@
 package com.mystore.testcases;
 
 import com.mystore.base.BaseClass;
+import com.mystore.dataprovider.DataProviders;
 import com.mystore.pageobjects.HomePage;
 import com.mystore.pageobjects.IndexPage;
 import com.mystore.pageobjects.LoginPage;
+import com.mystore.utility.Log;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
@@ -22,15 +24,21 @@ public class LoginPageTest extends BaseClass {
     }
 
 
-    @Test
+    @Test(dataProvider = "credentials", dataProviderClass = DataProviders.class)
     public void LoginTest(String uname, String pswd) throws Throwable {
+        Log.startTestCase("LoginTest");
         indexPage = new IndexPage();
+        Log.info("User is going to click on Sign In");
+        getDriver().switchTo().frame("framelive");
         loginPage = indexPage.clickOnSignIn();
-        homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"), homePage);
-//        homePage = loginPage.login(uname, pswd, homePage);
+        Log.info("Enter the username and password");
+        homePage = loginPage.login(uname, pswd, homePage);
         String actualUrl = homePage.getCurrURL();
         String expectedUrl = "https://demo.prestashop.com/#/en/front";
+        Log.info("Verifying if user is able to login");
         Assert.assertEquals(actualUrl, expectedUrl);
+        Log.info("Login is successful");
+        Log.endTestCase("LoginTest");
 
     }
 
