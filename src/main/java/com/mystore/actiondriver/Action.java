@@ -709,5 +709,15 @@ public class Action extends BaseClass implements ActionInterface {
         String currentDate = new SimpleDateFormat("yyyy-MM-dd-hhmmss").format(new Date());
         return currentDate;
     }
+    @Override
+    public void clear(WebDriver driver, WebElement ele){
+        boolean flag = false;
+        try {
+            ele.clear();
+            flag = true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 }
