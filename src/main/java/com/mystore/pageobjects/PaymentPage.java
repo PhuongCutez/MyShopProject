@@ -11,7 +11,7 @@ public class PaymentPage extends BaseClass {
     Action action= new Action();
     @FindBy(xpath = "//*[@id=\"conditions_to_approve[terms-and-conditions]\"]")
     private WebElement agreeClick;
-    @FindBy(xpath = "payment-option-1")
+    @FindBy(xpath = "//*[@id=\"conditions-to-approve\"]/ul/li/div[2]/label")
     private WebElement paymentCheckbox;
     @FindBy(xpath = "//*[@id=\"payment-confirmation\"]/div[1]/button")
     private WebElement paymentBtn;
