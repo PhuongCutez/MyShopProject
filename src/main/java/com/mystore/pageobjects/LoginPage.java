@@ -28,7 +28,7 @@ public class LoginPage extends BaseClass {
     @FindBy(id="submit-login")
     private WebElement signInBtn;
 
-    @FindBy(xpath = "//*[@id=\"login-form\"]/div/div[3]/a")
+    @FindBy(xpath = "//*[@id=\"content\"]/div/a")
     private WebElement onNewAccount;
 
     public LoginPage() {
@@ -45,15 +45,6 @@ public class LoginPage extends BaseClass {
         return homePage;
     }
 
-    public AddressPage login(String uname, String pswd,AddressPage addressPage) throws Throwable {
-        action.scrollByVisibilityOfElement(getDriver(), userName);
-        action.type(userName, uname);
-        action.type(password, pswd);
-        action.click(getDriver(), signInBtn);
-        Thread.sleep(2000);
-        addressPage=new AddressPage();
-        return addressPage;
-    }
     public AccountCreationPage createNewAccount() throws Throwable {
         action.click(getDriver(), onNewAccount);
         return new AccountCreationPage();

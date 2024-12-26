@@ -40,9 +40,10 @@ public class AccountCreationPage extends BaseClass {
     private WebElement privatePolicy;
     @FindBy(name = "customer_privacy")
     private WebElement privacyPolicy;
-    @FindBy(xpath = "//buttion[text()='Save']")
+    @FindBy(xpath = "//*[@id=\"customer-form\"]/footer/button")
     private WebElement saveBtn;
-
+    @FindBy(xpath = "//*[@id=\"customer-form\"]/footer/button")
+    private WebElement continueBtn;
     public AccountCreationPage() {
         PageFactory.initElements(getDriver(), this);
     }
@@ -67,14 +68,18 @@ public class AccountCreationPage extends BaseClass {
         action.click(getDriver(), signUpNewsLetter);
         action.click(getDriver(), privatePolicy);
         action.click(getDriver(), privacyPolicy);
-
-
     }
-
     public HomePage validateRegistration() throws Throwable {
-        saveBtn.click();
+        action.scrollByVisibilityOfElement(getDriver(), saveBtn);
+
         return new HomePage();
     }
+    public void clickOnContinue() throws Throwable {
+        action.click(getDriver(), continueBtn);
+    }
+//    public AddressPage registerAccount(String gender, String fName, String lName, String emails, String passwd, String birth) throws Throwable {
+//
+//    }
 
     public boolean validateAcountCreatePage() throws Throwable {
         return action.isDisplayed(getDriver(), formTitle);

@@ -1,0 +1,31 @@
+2024-12-25 21:15:15,938 INFO i.g.b.w.WebDriverManager [main] Using chromedriver 131.0.6778.204 (resolved driver for Chrome 131)
+2024-12-25 21:15:16,000 INFO i.g.b.w.WebDriverManager [main] Exporting webdriver.chrome.driver as C:\Users\bichp\.cache\selenium\chromedriver\win64\131.0.6778.204\chromedriver.exe
+2024-12-25 21:15:21,588 INFO c.m.u.Log [main] **********************************************addToCartTestTEST START **********************************************
+2024-12-25 21:15:55,739 INFO c.m.u.Log [main] **********************************************addToCartTestTEST END **********************************************
+2024-12-25 21:27:56,351 INFO i.g.b.w.WebDriverManager [main] Using chromedriver 131.0.6778.204 (resolved driver for Chrome 131)
+2024-12-25 21:27:56,414 INFO i.g.b.w.WebDriverManager [main] Exporting webdriver.chrome.driver as C:\Users\bichp\.cache\selenium\chromedriver\win64\131.0.6778.204\chromedriver.exe
+2024-12-25 21:28:01,740 INFO c.m.u.Log [main] **********************************************addToCartTestTEST START **********************************************
+2024-12-25 21:28:34,792 INFO c.m.u.Log [main] **********************************************addToCartTestTEST END **********************************************
+2024-12-25 22:55:25,513 INFO i.g.b.w.WebDriverManager [main] Using chromedriver 131.0.6778.204 (resolved driver for Chrome 131)
+2024-12-25 22:55:25,560 INFO i.g.b.w.WebDriverManager [main] Exporting webdriver.chrome.driver as C:\Users\bichp\.cache\selenium\chromedriver\win64\131.0.6778.204\chromedriver.exe
+2024-12-25 22:57:29,061 INFO i.g.b.w.WebDriverManager [main] Using chromedriver 131.0.6778.204 (resolved driver for Chrome 131)
+2024-12-25 22:57:29,109 INFO i.g.b.w.WebDriverManager [main] Exporting webdriver.chrome.driver as C:\Users\bichp\.cache\selenium\chromedriver\win64\131.0.6778.204\chromedriver.exe
+2024-12-25 23:03:57,813 INFO i.g.b.w.WebDriverManager [main] Using chromedriver 131.0.6778.204 (resolved driver for Chrome 131)
+2024-12-25 23:03:57,860 INFO i.g.b.w.WebDriverManager [main] Exporting webdriver.chrome.driver as C:\Users\bichp\.cache\selenium\chromedriver\win64\131.0.6778.204\chromedriver.exe
+2024-12-25 23:05:46,800 INFO i.g.b.w.WebDriverManager [main] Using chromedriver 131.0.6778.204 (resolved driver for Chrome 131)
+2024-12-25 23:05:46,843 INFO i.g.b.w.WebDriverManager [main] Exporting webdriver.chrome.driver as C:\Users\bichp\.cache\selenium\chromedriver\win64\131.0.6778.204\chromedriver.exe
+2024-12-25 23:23:39,211 INFO i.g.b.w.WebDriverManager [main] Using chromedriver 131.0.6778.204 (resolved driver for Chrome 131)
+2024-12-25 23:23:39,280 INFO i.g.b.w.WebDriverManager [main] Exporting webdriver.chrome.driver as C:\Users\bichp\.cache\selenium\chromedriver\win64\131.0.6778.204\chromedriver.exe
+2024-12-25 23:30:05,416 INFO i.g.b.w.WebDriverManager [main] Using chromedriver 131.0.6778.204 (resolved driver for Chrome 131)
+2024-12-25 23:30:05,461 INFO i.g.b.w.WebDriverManager [main] Exporting webdriver.chrome.driver as C:\Users\bichp\.cache\selenium\chromedriver\win64\131.0.6778.204\chromedriver.exe
+2024-12-25 23:31:44,920 INFO i.g.b.w.WebDriverManager [main] Using chromedriver 131.0.6778.204 (resolved driver for Chrome 131)
+2024-12-25 23:31:44,967 INFO i.g.b.w.WebDriverManager [main] Exporting webdriver.chrome.driver as C:\Users\bichp\.cache\selenium\chromedriver\win64\131.0.6778.204\chromedriver.exe
+2024-12-25 23:34:42,115 INFO i.g.b.w.WebDriverManager [main] Using chromedriver 131.0.6778.204 (resolved driver for Chrome 131)
+2024-12-25 23:34:42,162 INFO i.g.b.w.WebDriverManager [main] Exporting webdriver.chrome.driver as C:\Users\bichp\.cache\selenium\chromedriver\win64\131.0.6778.204\chromedriver.exe
+2024-12-25 23:34:46,767 INFO c.m.u.Log [main] **********************************************addAddressTEST START **********************************************
+2024-12-25 23:35:57,493 INFO i.g.b.w.WebDriverManager [main] Using chromedriver 131.0.6778.204 (resolved driver for Chrome 131)
+2024-12-25 23:35:57,542 INFO i.g.b.w.WebDriverManager [main] Exporting webdriver.chrome.driver as C:\Users\bichp\.cache\selenium\chromedriver\win64\131.0.6778.204\chromedriver.exe
+2024-12-25 23:36:01,565 INFO c.m.u.Log [main] **********************************************addAddressTEST START **********************************************
+2024-12-25 23:38:24,082 INFO i.g.b.w.WebDriverManager [main] Using chromedriver 131.0.6778.204 (resolved driver for Chrome 131)
+2024-12-25 23:38:24,135 INFO i.g.b.w.WebDriverManager [main] Exporting webdriver.chrome.driver as C:\Users\bichp\.cache\selenium\chromedriver\win64\131.0.6778.204\chromedriver.exe
+2024-12-25 23:38:28,664 INFO c.m.u.Log [main] **********************************************addAddressTEST START **********************************************

@@ -38,7 +38,7 @@ public class DataProviders {
 
     @DataProvider(name = "getProduct")
     public Object[][] getProduct() {
-        int rows = obj.getRowCount("Product");
+        int rows = obj.getRowCount("ProductDetails");
         int column = obj.getColumnCount("ProductDetails");
         int actRows = rows -1;
         Object[][] data = new Object[actRows][column];

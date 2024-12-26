@@ -6,6 +6,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.mystore.actiondriver.Action;
 import com.mystore.base.BaseClass;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class IndexPage extends BaseClass {
 
@@ -26,7 +30,8 @@ public class IndexPage extends BaseClass {
     }
 
     public LoginPage clickOnSignIn() throws Throwable {
-        action.fluentWait(getDriver(), signInBtn, 10);
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.visibilityOf(signInBtn));
         action.click(getDriver(), signInBtn);
         return new LoginPage();
     }
@@ -41,7 +46,9 @@ public class IndexPage extends BaseClass {
     }
 
     public SearchResultPage searchProduct(String productName) throws Throwable {
+        Thread.sleep(3000);
         action.type(searchProductBox, productName);
+        Thread.sleep(3000);
         searchProductBox.sendKeys(Keys.ENTER);
         Thread.sleep(3000);
         return new SearchResultPage();
