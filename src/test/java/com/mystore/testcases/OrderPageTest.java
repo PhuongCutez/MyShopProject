@@ -16,15 +16,15 @@ public class OrderPageTest extends BaseClass {
     private AddToCartPage addToCartPage;
     private OrderPage orderPage;
     @Parameters("browser")
-    @BeforeMethod
+    @BeforeMethod(groups = {"Smoke","Sanity","Regression"})
     public void setup(@Optional("chrome") String browser){
         launchApp(browser);
     }
-    @AfterMethod
+    @AfterMethod(groups = {"Smoke","Sanity","Regression"})
     public void tearDown() {
         getDriver().quit();
     }
-    @Test(dataProvider = "getProduct", dataProviderClass = DataProviders.class)
+    @Test(groups = {"Regression"}, dataProvider = "getProduct", dataProviderClass = DataProviders.class)
     public void verifyTotalPrice(String productName, String size, String qty) throws Throwable {
         Log.startTestCase("verifyTotalPrice");
         indexPage = new IndexPage();

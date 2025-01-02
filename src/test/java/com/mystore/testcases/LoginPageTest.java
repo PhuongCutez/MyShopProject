@@ -14,17 +14,17 @@ public class LoginPageTest extends BaseClass {
     private LoginPage loginPage;
     private HomePage homePage;
     @Parameters("browser")
-    @BeforeMethod
+    @BeforeMethod(groups = {"Smoke","Sanity","Regression"})
     public void setup(@Optional("chrome") String browser){
         launchApp(browser);
     }
-    @AfterMethod
+    @AfterMethod(groups = {"Smoke","Sanity","Regression"})
     public void tearDown() {
         getDriver().quit();
     }
 
 
-    @Test(dataProvider = "credentials", dataProviderClass = DataProviders.class)
+    @Test(groups = {"Smoke","Sanity"}, dataProvider = "credentials", dataProviderClass = DataProviders.class)
     public void LoginTest(String uname, String pswd) throws Throwable {
         Log.startTestCase("LoginTest");
         indexPage = new IndexPage();

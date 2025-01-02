@@ -12,15 +12,15 @@ public class SearchResultPageTest extends BaseClass {
     private IndexPage indexPage;
     private SearchResultPage searchResultPage;
     @Parameters("browser")
-    @BeforeMethod
+    @BeforeMethod(groups = {"Smoke","Sanity","Regression"})
     public void setup(@Optional("chrome") String browser){
         launchApp(browser);
     }
-    @AfterMethod
+    @AfterMethod(groups = {"Smoke","Sanity","Regression"})
     public void tearDown() {
         getDriver().quit();
     }
-    @Test(dataProvider = "searchProduct", dataProviderClass = DataProviders.class)
+    @Test(groups = "Smoke", dataProvider = "searchProduct", dataProviderClass = DataProviders.class)
     public void productAvailabilityTest(String productName) throws Throwable {
         Log.startTestCase("productAvailabilityTest");
        indexPage = new IndexPage();
